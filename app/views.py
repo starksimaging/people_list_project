@@ -21,4 +21,7 @@ def welcome_view(request):
 
 def person_list(request):
     people = Person.objects.all()
-    return render(request, 'app/person_list.html', {'people': people})
+    return render(request, 'app/person_list.html', {
+                                                    'people': people,
+                                                    'message': 'This is a message from view.py',
+                                         })
